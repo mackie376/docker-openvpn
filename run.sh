@@ -40,6 +40,7 @@ iptables -t nat -C POSTROUTING -s ${OVPN_SERVER}/24 -o $OVPN_NATDEVICE -j MASQUE
   --push "route ${OVPN_SERVER} 255.255.255.0" \
   --push "route ${OVPN_LAN} ${OVPN_LAN_MASK}" \
   --push "dhcp-option DNS ${OVPN_DNS}" \
+  --push "dhcp-option DNS 8.8.8.8" \
   \
   --keepalive 10 120 \
   --user nobody \
