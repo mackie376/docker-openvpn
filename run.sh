@@ -51,5 +51,4 @@ iptables -t nat -C POSTROUTING -s ${OVPN_SERVER}/24 -o $OVPN_NATDEVICE -j MASQUE
   --status openvpn-status.log \
   --verb ${OVPN_VERB:-3} \
   \
-  --compress lz4 \
   --cipher AES-256-GCM
